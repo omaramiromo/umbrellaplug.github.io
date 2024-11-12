@@ -1310,8 +1310,8 @@ class libtvshows:
 			except: transtitle = tvshowtitle.translate(tvshowtitle.maketrans('', '', '\/:*?"<>|'))
 			transtitle = string_tools.normalize(transtitle)
 			if control.setting('library.strm.use_tmdbhelper') == 'true':
-				content = 'plugin://plugin.video.themoviedb.helper/?info=play&tmdb_type=tv&islocal=True&tmdb_id=%s&season=%s&episode=%s&title=%s&year=%s&imdb=%s&tmdb=%s&tvdb=%s&tvshowtitle=%s&premiered=%s' % (
-							tmdb, season, episode, systitle, year, imdb, tmdb, tvdb, systvshowtitle, syspremiered)
+				content = 'plugin://plugin.video.fenlight/?action=play_Item&title=%s&year=%s&imdb=%s&tmdb=%s&tvdb=%s&season=%s&episode=%s&tvshowtitle=%s&premiered=%s' % (
+							systitle, year, imdb, tmdb, tvdb, season, episode, systvshowtitle, syspremiered)
 			else:
 				content = 'plugin://plugin.video.umbrella/?action=play_Item&title=%s&year=%s&imdb=%s&tmdb=%s&tvdb=%s&season=%s&episode=%s&tvshowtitle=%s&premiered=%s' % (
 							systitle, year, imdb, tmdb, tvdb, season, episode, systvshowtitle, syspremiered)
